@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number Game</title>
+</head>
+
+<body>
+    <div align="center">
+
+        <h1>Guess the Number Game</h1>
+
+        <!-- T() specifies java cass -->
+        <h3 th:text="${__${T(academy.learnprogramming.util.AttributeNames).MAIN_MESSAGE}__}">
+            Main Message Content
+        </h3>
+
+        <h3 th:text="${__${T(academy.learnprogramming.util.AttributeNames).RESULT_MESSAGE}__}">
+            Result Message Content
+        </h3>
+                         <!-- action="play" not needed anymore -->
+        <form th:action="@{__${T(academy.learnprogramming.util.GameMappings).PLAY}__}"  method="post">
+            <label for="guess">Enter your guess</label>
+            <input id="guess" type="number" name="guess"/>
+            <input type="submit" value="Submit"/>
+        </form>
+
+        <footer>
+            <p>Made by ŁK</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
